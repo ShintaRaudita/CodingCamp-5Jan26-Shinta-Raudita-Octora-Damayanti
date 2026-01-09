@@ -1,0 +1,28 @@
+.overflow-x-auto::-webkit-scrollbar {
+    height: 6px;
+}
+.overflow-x-auto::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.overflow-x-auto::-webkit-scrollbar-thumb {
+    background: #10b981;
+    border-radius: 10px;
+}
+
+.task-row {
+    transition: all 0.3s ease;
+}
+
+.completed-text {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+.bg-white\/90 {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+    transition: background-image 0.5s ease-in-out;
+    background-attachment: fixed;
+}

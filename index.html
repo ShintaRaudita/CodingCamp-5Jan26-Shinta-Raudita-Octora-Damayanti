@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project Shinta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4 bg-cover bg-center bg-no-repeat transition-all duration-700">
+    <div class="bg-white/90 backdrop-blur-sm w-full max-w-2xl rounded-xl shadow-2xl overflow-hidden border-t-8 border-emerald-500 my-8">
+        <div class="p-6 md:p-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">To-Do (GeuLis)t App</h1>
+
+            <!-- input -->
+            <div class="flex flex-col md:flex-row gap-3 mb-6">
+                <!-- nama -->
+                <input type="text" id="taskInput" placeholder="Add a todo..." 
+                    class="flex-1 border-2 border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-500 transition-colors">
+                <!-- date -->
+                <input type="date" id="dateInput" 
+                    class="border-2 border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:border-emerald-500 transition-colors text-gray-600">
+                <!-- add task -->
+                <button id="addTask" class="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-6 rounded-lg transition-colors flex items-center justify-center">
+                    <span class="text-2xl">+</span>
+                </button>
+            </div>
+
+            <p id="errorMsg" class="text-red-500 text-sm mb-4 hidden">Please fill in both fields!</p>
+
+            <!-- filter, delete -->
+            <div class="flex justify-between items-center mb-6">
+                <div class="relative inline-block text-left">
+                    <select id="filterTask" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-emerald-500 focus:border-emerald-500 block w-full p-2.5">
+                        <option value="all">FILTER (ALL)</option>
+                        <option value="pending">PENDING</option>
+                        <option value="completed">COMPLETED</option>
+                    </select>
+                </div>
+                <button id="deleteAll" class="bg-red-50 text-red-600 hover:bg-red-600 hover:text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all">
+                    DELETE ALL
+                </button>
+            </div>
+
+            <!-- list -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-gray-50 uppercase text-xs font-bold text-gray-500 border-b">
+                            <th class="px-4 py-3">Task</th>
+                            <th class="px-4 py-3 text-center">Due Date</th>
+                            <th class="px-4 py-3 text-center">Status</th>
+                            <th class="px-4 py-3 text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="todoBody">
+                        <tr id="emptyRow">
+                            <td colspan="4" class="text-center py-10 text-gray-400 italic">No task found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w-full text-center py-4 bg-white/20 backdrop-blur-md mt-auto">
+        <p class="text-white font-medium drop-shadow-md">
+            Dibuat oleh <span class="font-bold border-b-2 border-emerald-500">Shinta</span>
+        </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
